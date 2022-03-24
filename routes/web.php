@@ -20,3 +20,11 @@ Route::get('/', function () {
 
 
 Route::resource('staffs', StaffController::class);
+
+Route::get('/blade', function () {
+    return view('child');
+});
+
+Route::get('/blade1', function () {
+    return view('child1');
+});
