@@ -18,8 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Route::middleware('auth')->resource('staffs', StaffController::class);
 
-Route::resource('staffs', StaffController::class);
+Route::middleware('auth')->group(function () {
+    Route::resource('staffs', StaffController::class);
+});
 
 Route::get('/blade', function () {
     return view('child');
@@ -28,3 +31,7 @@ Route::get('/blade', function () {
 Route::get('/blade1', function () {
     return view('child1');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
