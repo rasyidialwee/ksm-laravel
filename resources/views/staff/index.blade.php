@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-10">
 
-            <h1>Senarai Staff</h1>
+            <h1>Staff Saya</h1>
         </div>
         <div class="col-2">
             <a href="/staffs/create" class="btn btn-outline-primary float-end">Create New</a>
